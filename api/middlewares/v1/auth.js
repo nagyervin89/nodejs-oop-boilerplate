@@ -11,7 +11,7 @@ export default class Auth extends Middleware {
 
 	/**
 	 * @description
-	 * @author Nagy Ervin <nagy.ervin[at]innoweb.ro>
+	 * @author Nagy Ervin
 	 * @param {*} req 
 	 * @param {*} res 
 	 * @param {*} next 

@@ -9,11 +9,11 @@ import {
 
 export default class ErrorHandler {
 
-  constructor() {}
+  constructor() { }
 
   /**
    * @description
-   * @author Nagy Ervin <nagy.ervin[at]innoweb.ro>
+   * @author Nagy Ervin
    * @param {*} req 
    * @param {*} res 
    * @param {*} next 
@@ -48,7 +48,7 @@ export default class ErrorHandler {
   }
   /*
    * Extract and retrive data from req object
-   * @author Nagy Ervin <nagy.ervin@innoweb.ro>
+   * @author Nagy Ervin
    * @param {*} req 
    * 
    * @retrun Object

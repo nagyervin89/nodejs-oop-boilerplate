@@ -3,11 +3,11 @@
  */
 export default class NotFoundHandler {
 
-	constructor() {}
+	constructor() { }
 
 	/**
 	 * Handle 404 requests
-	 * @author Nagy Ervin <nagy.ervin[at]innoweb.ro>
+	 * @author Nagy Ervin
 	 * @param {*} req 
 	 * @param {*} res 
 	 * @param {*} next 

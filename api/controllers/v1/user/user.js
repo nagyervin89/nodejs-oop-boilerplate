@@ -13,7 +13,7 @@ export default class UserController extends BaseController {
    * Handle signup request, insert user into DB 
    * retrive jwt to client
    * 
-   * @author Nagy Ervin <nagy.ervin@innoweb.ro>
+   * @author Nagy Ervin
    * @param  {} req
    * @param  {} res
    * @param  {} next
@@ -36,7 +36,7 @@ export default class UserController extends BaseController {
   /**
    * Change user's password
    * 
-   * @author Nagy Ervin <nagy.ervin[at]innoweb.ro>
+   * @author Nagy Ervin
    * @param  {} req
    * @param  {} res
    * @param  {} next
@@ -50,7 +50,7 @@ export default class UserController extends BaseController {
   /**
    * Generate password change request token
    * 
-   * @author Nagy Ervin <nagy.ervin[at]innoweb.ro>
+   * @author Nagy Ervin
    * @param  {} req
    * @param  {} res
    * @param  {} next

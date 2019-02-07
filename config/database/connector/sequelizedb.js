@@ -1,11 +1,11 @@
 /**
- * @author Nagy Ervin <nagy.ervin@innoweb.ro>
+ * @author Nagy Ervin
  */
 const config = require('config')
 const Sequelize = require('sequelize')
 const environment = config.get('environment')
 
-switch(environment) {
+switch (environment) {
   case 'dev':
     const credentialFile = './development'
   case 'prod':
@@ -21,20 +21,20 @@ switch(environment) {
 const credentials = require(credentialFile)
 
 const connection = new Sequelize(
-  credentials.default.database.name, 
-  credentials.default.database.user, 
+  credentials.default.database.name,
+  credentials.default.database.user,
   credentials.default.database.password, {
-  host: 'localhost',
-  dialect: 'mysql',
+    host: 'localhost',
+    dialect: 'mysql',
 
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  },
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    },
 
-  operatorsAliases: false
-});
+    operatorsAliases: false
+  });
 
 module.exports = connection

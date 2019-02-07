@@ -1,17 +1,17 @@
 /**
  * 
- * @author Nagy Ervin <nagy.ervin@innoweb.ro>
+ * @author Nagy Ervin
  * 
  */
 export default {
     //MySQL
     database: {
-        user:  'root',
+        user: 'root',
         password: '123456',
         name: 'shareforhelp'
     },
     //Mongo
     url: {
 
-    }    
+    }
 }

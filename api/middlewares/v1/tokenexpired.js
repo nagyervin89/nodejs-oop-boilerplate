@@ -12,7 +12,7 @@ export default class TokenExpired extends Middleware {
 	/**
 	 * Handle login request, generate jwt send it back to client
 	 * 
-	 * @author Nagy Ervin <nagy.ervin[at]innoweb.ro>
+	 * @author Nagy Ervin
 	 * @param  {} req
 	 * @param  {} res
 	 * @param  {} next

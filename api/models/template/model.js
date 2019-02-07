@@ -1,5 +1,5 @@
 /**
- * @author Nagy Ervin <nagy.ervin@innoweb.ro>
+ * @author Nagy Ervin
  */
 import underscore from 'underscore'
 import validator from 'joi'

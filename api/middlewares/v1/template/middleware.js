@@ -1,5 +1,5 @@
 /**
- * @author Nagy Ervin <nagy.ervin@innoweb.ro>
+ * @author Nagy Ervin
  */
 
 import jwt from 'jsonwebtoken'

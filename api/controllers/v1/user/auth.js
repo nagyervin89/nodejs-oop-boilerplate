@@ -13,7 +13,7 @@ export default class AuthController extends BaseController {
 	/**
 	 * Handle login request, generate jwt send it back to client
 	 * 
-	 * @author Nagy Ervin <nagy.ervin[at]innoweb.ro>
+	 * @author Nagy Ervin
 	 * @param  {} req
 	 * @param  {} res
 	 * @param  {} next
@@ -39,7 +39,7 @@ export default class AuthController extends BaseController {
 	/**
 	 * Handle logout request, put current jwt into blacklist (softdelete)
 	 * 
-	 * @author Nagy Ervin <nagy.ervin@innoweb.ro>
+	 * @author Nagy Ervin
 	 * @param  {} req
 	 * @param  {} res
 	 * @param  {} next
