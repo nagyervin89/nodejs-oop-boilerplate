@@ -34,7 +34,7 @@ describe('test function', () => {
 // describe('loggedIn', () => {
 //     it('should return the current user with id, email', () => {
 //         const result = Auth.loggedIn()
-//         expect(result).toMatchObject({id: 1, email: 'codervin89@gmail.com'})
+//         expect(result).toMatchObject({id: 1, email: 'youremail@gmail.com'})
 //         expect(result).toHaveProperty('id', 1)
 //     })
 // })

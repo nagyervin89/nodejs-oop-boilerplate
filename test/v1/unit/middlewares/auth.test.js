@@ -7,7 +7,7 @@ describe('auth middleware', () => {
     const authMdl = new Auth()
     const user = {
       id: 1,
-      email: 'codervin89@gmail.com'
+      email: 'youremail@gmail.com'
     }
     const token = await userModel.generateAuthToken(user)
     const req = {

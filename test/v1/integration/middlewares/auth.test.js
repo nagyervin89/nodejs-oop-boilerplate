@@ -9,7 +9,7 @@ describe('Test auth middleware', () => {
 	beforeEach(() => {
 
 	})
-	afterEach(() => {})
+	afterEach(() => { })
 
 	const exec = () => {
 		const header = {
@@ -35,7 +35,7 @@ describe('Test auth middleware', () => {
 		const user = new User()
 		jwt = await user.generateAuthToken({
 			id: 1,
-			email: 'codervin89@gmail.com'
+			email: 'youremail@gmail.com'
 		})
 		const response = await exec()
 		expect(response.status).toBe(200)

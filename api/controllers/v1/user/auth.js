@@ -26,11 +26,11 @@ export default class AuthController extends BaseController {
 		if (req.currentUser) res.status(400).send()
 		const token = this.jwt.sign({
 			id: 1,
-			email: 'codervin89@gmail.com'
+			email: 'youremail@gmail.com'
 		}, this.config.get('jwtPrivateKey'))
 		res.header('x-auth-token', token).status(200).send({
 			id: 1,
-			email: 'codervin89@gmail.com'
+			email: 'youremail@gmail.com'
 		})
 	}
 
