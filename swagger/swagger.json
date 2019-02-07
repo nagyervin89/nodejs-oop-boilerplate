@@ -1,0 +1,147 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "ShareForHelp - API",
+        "license": {
+            "name": "MIT"
+        }
+    },
+    "host": "localhost:8181",
+    "basePath": "/api/v1",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json",
+        "application/xml"
+    ],
+    "paths": {
+        "/users": {
+            "post": {
+                "summary": "Add a new user",
+                "operationId": "createUser",
+                "tags": [
+                    "users"
+                ],
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "User object that needs to be added to the DB",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    },
+                    {
+                        "name": "x-user-device-type",
+                        "in": "header",
+                        "description": "Device type, must be present in request header.",
+                        "type": "string",
+                        "enum": [
+                            "Desktop",
+                            "IOS",
+                            "Android"
+                        ],
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User created successfully. Client must store the jwt token in localstorage or cookie, and send it back as 'x-auth-token' in request's header if required.",
+                        "schema": {
+                            "required": [
+                                "jwt",
+                                "message"
+                            ],
+                            "properties": {
+                                "jwt": {
+                                    "type": "string",
+                                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJjb2RlcnZpbjg5QGdtYWlsLmNvbSIsImlhdCI6MTU0NDcwODgxMX0.BdtoC-P_F2kRgTFGKLJQ4baDlvlDXib2XJuFcHprWuA"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "User created successfully"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request. Check the request header. 'x-user-device-type' must be present and cointains a value: Desktop or IOS or Android",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "405": {
+                        "description": "Validation exception. Server side validation failed. Check the request body",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal error. Backend error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "User": {
+            "required": [
+                "name",
+                "email",
+                "password",
+                "phonenumber"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "phonenumber": {
+                    "type": "string"
+                },
+                "website": {
+                    "type": "string"
+                },
+                "facebookaccesstoken": {
+                    "type": "string"
+                },
+                "facebookuserid": {
+                    "type": "string"
+                },
+                "imageurl": {
+                    "type": "string"
+                },
+                "googleuserid": {
+                    "type": "string"
+                },
+                "linkedinuserid": {
+                    "type": "string"
+                }
+            }
+        },
+        "Error": {
+            "required": [
+                "message"
+            ],
+            "properties": {
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
