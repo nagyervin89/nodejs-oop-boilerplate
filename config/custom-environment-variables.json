@@ -1,4 +1,4 @@
 {
-    "jwtPrivateKey": "shareforhelp_jwtPrivateKey",
-    "environment": "shareforhelp_environment"
+    "jwtPrivateKey": "_jwtPrivateKey",
+    "environment": "_environment"
 }

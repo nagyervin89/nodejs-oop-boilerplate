@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
-  title: shareforhelp.org API
-  description: Backend API for shareforhelp website and mobile apps
+  title: yourwebsite.org API
+  description: Backend API for yourwebsite website and mobile apps
   version: "1.0.0"
 # the domain of the service
 host: localhost:8181

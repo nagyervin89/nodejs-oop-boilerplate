@@ -8,7 +8,7 @@ export default {
     database: {
         user: 'root',
         password: '123456',
-        name: 'shareforhelp'
+        name: ''
     },
     //Mongo
     url: {
